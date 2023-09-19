@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "bfr"
+name = "yabfi"
 version = "1.0.0"
