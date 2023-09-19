@@ -1,9 +1,9 @@
 [package]
-name = "yabfi"
+name = "yabfr"
 include = ["src/**/*", "Cargo.toml", "README.md", "LICENSE"]
 version = "1.0.0"
 edition = "2021"
-description = "⚡blazingly fast brainf**k interpreter made in rust (yet another brainf**k interpreter)"
+description = "⚡blazingly fast brainf**k interpreter made in rust (yet another brainf**k _in_ rust)"
 authors = ["Gurkan <hello@gurkz.me>"]
 license = "LGPL-3.0"
 homepage = "https://github.com/thatgurkangurk/bf"

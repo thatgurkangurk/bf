@@ -13,7 +13,7 @@ fn main() {
     let args: Vec<String> = env::args().collect();
 
     if args.len() != 2 {
-        println!("usage: yabfi <any_file.bf>");
+        println!("usage: yabfr <any_file.bf>");
         std::process::exit(1);
     }
 
