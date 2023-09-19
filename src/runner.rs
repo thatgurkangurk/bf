@@ -2,12 +2,12 @@ use std::io::Read;
 
 use crate::instructions::Instruction;
 
-pub fn run(instructions: &Vec<Instruction>, tape: &mut Vec<u8>, data_ptr: &mut usize) {
+fn execute(instructions: &Vec<Instruction>, tape: &mut Vec<u8>, data_ptr: &mut usize) {
     for instruction in instructions {
         match instruction {
             Instruction::Loop(nested) => {
                 while tape[*data_ptr] != 0 {
-                    run(nested, tape, data_ptr)
+                    execute(nested, tape, data_ptr)
                 }
             }
             Instruction::Write => print!("{}", tape[*data_ptr] as char),
@@ -24,4 +24,11 @@ pub fn run(instructions: &Vec<Instruction>, tape: &mut Vec<u8>, data_ptr: &mut u
             Instruction::Decrement => tape[*data_ptr] -= 1,
         }
     }
+}
+
+pub fn run(instructions: &Vec<Instruction>) {
+    let mut tape: Vec<u8> = vec![0; 1024];
+    let mut data_ptr = 512;
+
+    execute(instructions, &mut tape, &mut data_ptr);
 }
