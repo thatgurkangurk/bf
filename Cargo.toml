@@ -1,5 +1,6 @@
 [package]
 name = "yabfi"
+include = ["src/**/*", "Cargo.toml", "README.md", "LICENSE"]
 version = "1.0.0"
 edition = "2021"
 description = "⚡blazingly fast brainf**k interpreter made in rust (yet another brainf**k interpreter)"
