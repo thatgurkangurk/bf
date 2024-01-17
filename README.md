@@ -4,11 +4,24 @@
 
 ## usage
 
+### wasm:
 ```sh
-yabfr <any-file.bf>
+npm install yabfr
 ```
 
-### about the name
+```ts
+import { run } from "yabfr";
 
-yes, i know it's bad. every other decent name was taken on crates.io
-if you have a better name let me know asap
+const output = run("brainf**k program");
+
+console.log(output);
+```
+
+### rust
+```rust
+use yabfr::run;
+
+let output = run("++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.");
+
+println!("{}", output)
+```

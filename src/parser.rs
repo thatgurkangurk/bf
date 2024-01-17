@@ -1,5 +1,10 @@
 use crate::instructions::{Instruction, OpCode};
 
+/// parse the [opcodes](OpCode) and return a vector of [instructions](Instruction)
+///
+/// # arguments
+/// * `opcodes` - a vector of [opcodes](OpCode)
+///
 pub fn parse(opcodes: Vec<OpCode>) -> Vec<Instruction> {
     let mut program: Vec<Instruction> = Vec::new();
     let mut start = 0;
